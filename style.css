@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-body: 16px;
+  --global-border-radius: calc(var(--font-body) / 2);
+
+  --primary-color: #EF6C35;
+  --secondary-color: #161C2E;
+  --text-color: #fff;
+  --background-group-color: #E5E5E5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--secondary-color);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+main,
+nav,
+footer {
+  padding: 0 var(--font-body);
+}
+
+[class*="flex"] {
+  display: flex;
+}
+
+[class*="button"] {
+  display: block;
+  padding: var(--font-body);
+  border-radius: calc(var(--font-body) / 2);
+  border: 2px solid;
+  font-size: calc(var(--font-body) * 1.375);
+  text-align: center;
+}
+
+.button-primary {
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+.button-secondary {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+nav {
+  margin: calc(var(--font-body) / 2) 0;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a {
+  position: relative;
+  font-size: calc(var(--font-body) * 1.125);
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+nav a.active {
+  padding: var(--font-body) calc(var(--font-body) * 1.25);
+  color: var(--primary-color);
+}
+
+nav a.active::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: var(--primary-color);
+  border-radius: var(--font-body);
+
+  bottom: 0;
+  left: calc(var(--font-body) * 1.25);
+  right: calc(var(--font-body) * 1.25);
+}
+
+h1,
+h2 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: calc(var(--font-body) * 2);
+}
+
+h2 {
+  color: var(--primary-color);
+  font-size: calc(var(--font-body) * 1.5);
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.logo-image {
+  height: calc(var(--font-body) * 2);
+}
+
+.logo-text {
+  color: var(--primary-color);
+  margin-left: var(--font-body);
+}
+
+.hero {
+  margin-top: calc(var(--font-body) * 2.5);
+}
+
+.hero span {
+  color: var(--primary-color);
+}
+
+.hero .content {
+  margin-top: calc(var(--font-body) * 2);
+}
+
+.hero img {
+  margin-top: calc(var(--font-body) * 2);
+  max-width: 100%;
+}
+
+.hero .content p {
+  font-size: calc(var(--font-body) * 1.25);
+}
+
+.hero .content .button-primary {
+  margin-top: calc(var(--font-body) * 2);
+  max-width: calc(var(--font-body) * 19);
+}
+
+.services,
+.about,
+.contact {
+  margin-top: calc(var(--font-body) * 4);
+}
+
+.services h2,
+.about h2,
+.contact h2 {
+  text-align: center;
+}
+
+.services .content {
+  margin-top: calc(var(--font-body) * 2.5);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--font-body);
+}
+
+.services .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(50% - calc(var(--font-body) * 4.75));
+  padding: calc(var(--font-body) * 2);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--font-body);
+  background-color: var(--background-group-color);
+}
+
+.services .card img {
+  width: calc(var(--font-body) * 3);
+}
+
+.services .card .title {
+  margin-top: calc(var(--font-body) * 1.25);
+  color: var(--secondary-color);
+  font-size: calc(var(--font-body) * 1.125);
+  text-align: center;
+}
+
+.services .card .text {
+  display: none;
+}
+
+.about .content,
+.contact .content {
+  margin-top: calc(var(--font-body) * 1.5);
+}
+
+.card-group {
+  margin-top: calc(var(--font-body) * 2.5);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--font-body);
+}
+
+.about .content>p,
+.contact .content>p {
+  margin-bottom: calc(var(--font-body) * .5);
+  font-size: calc(var(--font-body) * 1.125);
+  text-align: center;
+}
+
+.about .card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(50% - calc(var(--font-body) * 0.5));
+  border-radius: var(--font-body);
+}
+
+.about .card img {
+  width: 100%;
+}
+
+.about .card .title {
+  margin-top: calc(var(--font-body) * 1.25);
+  margin-bottom: 0;
+  font-size: calc(var(--font-body) * 1.125);
+}
+
+.about .card .text {
+  margin: 0;
+  font-weight: 300;
+}
+
+.about .card .text+.text {
+  font-size: calc(var(--font-body) * 0.875);
+}
+
+.about .button-secondary {
+  margin-top: calc(var(--font-body) * 2);
+}
+
+.contact .contact-image {
+  width: 100%;
+  order: 3;
+}
+
+.contact .content>p {
+  margin-bottom: calc(var(--font-body) * 1.5);
+}
+
+.contact .content .flex-wrapper {
+  gap: calc(var(--font-body) * 2.5);
+  flex-wrap: wrap;
+}
+
+.contact .flex-contact-form {
+  flex-direction: column;
+  flex: 1;
+  align-self: center;
+  order: 2;
+}
+
+.contact .flex-contact-form input,
+.contact .flex-contact-form label {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--font-body);
+}
+
+.contact .flex-contact-form input {
+  margin-top: calc(var(--font-body) * 0.75);
+  margin-bottom: calc(var(--font-body) * 2);
+  padding: var(--font-body);
+  border-radius: var(--global-border-radius);
+  border: 2px solid var(--primary-color);
+  background-color: var(--background-group-color);
+  color: var(--secondary-color);
+}
+
+.contact .flex-contact-form .button-primary {
+  text-transform: uppercase;
+}
+
+footer {
+  padding: calc(var(--font-body) * 0.75);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+/* Important START */
+.mt {
+  margin-top: var(--font-body) !important;
+}
+
+/* Important END */
+
+@media only screen and (min-width: 992px) {
+
+  main,
+  nav {
+    margin: auto;
+    max-width: 1200px;
+  }
+
+  .services .card {
+    width: calc(calc(100% / 3) - var(--font-body) * 5);
+  }
+
+  .services .card .title {
+    font-size: calc(var(--font-body) * 1.5);
+  }
+
+  .services .card .text {
+    display: block;
+    margin-top: var(--font-body);
+    color: var(--secondary-color);
+  }
+
+  .contact .contact-image {
+    width: unset;
+    max-width: calc(var(--font-body) * 32);
+    order: 1;
+  }
+
+  .contact .flex-contact-form .button-primary {
+    max-width: calc(var(--font-body) * 10);
+  }
+}
