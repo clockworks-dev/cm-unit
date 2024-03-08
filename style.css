@@ -145,7 +145,7 @@ h2 {
 
 .hero .content .button-primary {
   margin-top: calc(var(--font-body) * 2);
-  max-width: calc(var(--font-body) * 19);
+  max-width: calc(var(--font-body) * 12.5);
 }
 
 .services,
@@ -224,32 +224,23 @@ h2 {
   border-radius: calc(var(--font-body) * 2);
 }
 
+.about .card .linkedin {
+  position: relative;
+  margin-top: calc(var(--font-body) * 0.25);
+  height: var(--font-body);
+}
+
+.about .card .linkedin img {
+  position: absolute;
+  left: calc(var(--font-body) * (-0.25));
+  width: calc(var(--font-body) * 1.75);
+  border-radius: 0;
+}
+
 .about .card .title {
   margin-top: calc(var(--font-body) * 1.25);
   margin-bottom: 0;
   font-size: calc(var(--font-body) * 1.125);
-}
-
-.about .card a.title {
-  position: relative;
-  color: var(--text-color);
-}
-
-.about .card a.title::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: calc(var(--font-body) * 6.5);
-  height: 1px;
-  background-color: var(--primary-color);
-}
-
-.about .card a.title .linkedin {
-  position: absolute;
-  bottom: calc(var(--font-body) * 0.25);
-  left: calc(var(--font-body) * 6.5);
-  width: var(--font-body);
-  color: var(--primary-color);
 }
 
 .about .card .text {
@@ -315,6 +306,8 @@ footer {
   text-align: center;
 }
 
+
+
 /* Important START */
 .mt {
   margin-top: var(--font-body) !important;
@@ -326,7 +319,7 @@ footer {
 
   main,
   nav {
-    margin: auto;
+    margin: calc(var(--font-body) / 2) auto;
     max-width: 1200px;
   }
 
@@ -378,49 +371,8 @@ footer {
     filter: grayscale(0);
   }
 
-  .about .card a.title::before {
-    content: none;
-  }
-
-  .about .card a.title:hover::after {
-    content: '';
-    position: absolute;
-    background-color: var(--primary-color);
-    top: 10px;
-    left: calc(var(--font-body) * 6.875);
-    width: 2px;
-    height: 1px;
-
-    animation-name: linkedInAnimation;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes linkedInAnimation {
-    0% {
-      top: 10px;
-    }
-
-    5% {
-      top: 20px;
-    }
-
-    20% {
-      left: 0;
-    }
-
-    30% {
-      width: calc(var(--font-body) * 0.625);
-    }
-
-    50% {
-      width: calc(var(--font-body) * 7.5);
-    }
-
-    100% {
-      top: 20px;
-      width: calc(var(--font-body) * 7.5);
-      left: 0;
-    }
+  .about .card .linkedin img {
+    width: calc(var(--font-body) * 2.25);
+    border-radius: 0;
   }
 }
